@@ -15,11 +15,6 @@ module.exports = async (req, res, next) => {
             return next(new ErrorHandler(error.details[0].message, 400))
         }
 
-        console.log('*******************************');
-        console.log(error.details);
-        console.log('*******************************');
-
-
         next();
 
     } catch (e) {
